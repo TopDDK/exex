@@ -2,6 +2,7 @@
 
 #wrap{
     width:100%;
+    position: relative;
 }
 
 header, main, footer{
@@ -16,6 +17,8 @@ header, main, footer{
     display:flex;
     justify-content: space-between;
     align-items: center;
+    background: url("../images/logobackGround.gif") no-repeat 100% 100%/cover ;
+    
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 .navi, .search{
@@ -47,6 +50,7 @@ header, main, footer{
 
 .fa-bars, .fa-search{
     font-size:30px;
+    color: #fff;
 }
 
 .logo{
@@ -58,26 +62,29 @@ header, main, footer{
     display:block;
     width:120px;
     height:60px;
-    background: #ccc;
+    /* background: #ccc; */
 }
 
 #gnb{
-    position: fixed;
+    position: absolute;
     left:-100%;
     width:100%;
     height:100%;
-    display:none;
-    background: rgb(85, 143, 219);
+    top: 80px;
+    display:none ;
+    background: rgba(0, 0, 0, 0.5);
     z-index:999;
 }
 
 #gnb>ul>li>a{
     position: relative;
     display:block;
+    color: #fff;
     font-size:16px;
-   /*  text-indent: 10px; */
+    font-weight: 600;
+    text-indent: 10px;
     padding:10px 0;
-    text-align: center;
+    /* text-align: center; */
 }
 
 #gnb>ul>li>a:after{
@@ -89,16 +96,18 @@ header, main, footer{
     top:50%;
     transform: translateY(-50%);
     right:10px;
-    color:red;
+    color:rgba(255, 255, 255, 0.5);
 }
 
 .depth2{
+    background:#fff;
     display:none;
 }
 
 .depth2 a{
     display:block;
     padding:8px;
+    color: #000;
     font-size:14px;
     text-align: center;
     /* text-indent: 20px; */
@@ -108,8 +117,8 @@ header, main, footer{
     position: relative;
     width:100%;
     height:50px;
-    background: #ccc;
-    display:none;
+    background: #fd9800;
+    display:none ;
 }
 
 #sch{
@@ -118,11 +127,12 @@ header, main, footer{
     width:80%;
     height:40px;
     margin:0 auto;
-    border:1px solid #ccc;
+    border:1px solid #fd9800;
+    border-radius: 10px;
     text-indent: 10px;
     top:5px;
-    background: rgba(255, 255, 255, 0.5);
-    color: red;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
 }
 
 /* 메인CSS */
@@ -136,7 +146,7 @@ header, main, footer{
     display:block;
     width:100%;
     height:100%;
-    background: url("http://via.placeholder.com/1920x1080") no-repeat center / cover;
+    background: url("../images/pVkUlpH.jpg") no-repeat center  / cover;
 }
 
 #gall1{
@@ -165,6 +175,7 @@ header, main, footer{
 .tit{
     display:block;
     font-size:16px;
+    font-weight: 600;
     text-indent: 10px;
     padding:5px 0;
 }
@@ -179,11 +190,13 @@ header, main, footer{
 .btn{
     position: relative;
     width:80px;
-    background: #ccc;
+    /* background: #ccc; */
     margin-left:auto;
     display:flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 14px;
+    padding: 5px 0;
 }
 
 .btn>span{
@@ -192,7 +205,7 @@ header, main, footer{
 }
 
 .good{
-    color: olivedrab;
+    color: rgb(155, 155, 155);
 }
 
 .good.red{
@@ -204,7 +217,7 @@ header, main, footer{
     display:none;
 }
 
-#choice, .showpic{
+#choice{
     width:90%;
     height:auto;
     margin:20px auto 0 auto;
@@ -215,12 +228,28 @@ select{
     width:100%;
     height:30px;
     border:1px solid #ccc;
+    border-radius: 10px;
 }
 
+.showpic{
+    width: 100%;
+    margin:10px auto 0 auto;
+}
 .showpic img{
     display:block;
     width:100%;
     height:auto;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.showpic p{
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px 0;
+    font-weight: 600;
+    border-radius:0px 0px 10px 10px;
+    background: orange;
 }
 
 #sumImg{
@@ -266,13 +295,13 @@ select{
 footer{
     width:100%;
     height:auto;
-    background: black;
+    background: rgb(66, 66, 66);
 }
 
 #fnav>ul>li>a{
     position: relative;
     display:block;
-    font-size:16px;
+    font-size:14px;
     font-weight: 600;
     color:#fff;
     padding:5px 0;
@@ -294,7 +323,7 @@ footer{
 .fdepth2{display:none;}
 
 .fdepth2 li{
-    background: rgb(26, 26, 26);
+    background:#fff;
     padding:10px 0;
 }
 
@@ -326,5 +355,7 @@ footer{
 }
 
 .conts{
+    background: rgb(250, 250, 250);
+    padding:5px 0 10px 0; 
     display: none;
 }
